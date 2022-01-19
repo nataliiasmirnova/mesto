@@ -1,0 +1,5 @@
+.profile__first-line {
+    display: flex;
+    align-items: center;
+    max-height: 26px;
+}
