@@ -1,0 +1,11 @@
+.photo-grid__like-button {
+    min-width: 22px;
+    height: 19px;
+    border: none;
+    padding: 0;
+    /*display: flex;
+    border: 1px solid #ffffff;
+    box-sizing: border-box;
+    margin-left: 18px;*/
+    background: no-repeat center center url(../../../images/like-button.svg);
+}

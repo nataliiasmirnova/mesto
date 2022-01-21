@@ -1,0 +1,10 @@
+.photo-grid__card-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: -79px;
+    padding: 0 20px 0 21px;
+    z-index: 1;
+    position: relative;
+    background: #ffffff;
+}
