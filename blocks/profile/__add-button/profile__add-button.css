@@ -5,4 +5,14 @@
     border: 1px solid #ffffff;
     box-sizing: border-box;
     background: no-repeat center center url(../../../images/add-button.svg);
+    transition: .2s;
+    -webkit-transition: .2s;
+    -moz-transition: .2s;
+    -ms-transition: .2s;
+    -o-transition: .2s;
+}
+
+.profile__add-button:hover {
+    opacity: .6;
+    cursor: pointer;
 }

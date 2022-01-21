@@ -3,9 +3,19 @@
     height: 19px;
     border: none;
     padding: 0;
-    /*display: flex;
-    border: 1px solid #ffffff;
-    box-sizing: border-box;
-    margin-left: 18px;*/
     background: no-repeat center center url(../../../images/like-button.svg);
+    transition: .2s;
+    -webkit-transition: .2s;
+    -moz-transition: .2s;
+    -ms-transition: .2s;
+    -o-transition: .2s;
+}
+
+.photo-grid__like-button:hover {
+    opacity: .5;
+    cursor: pointer;
+}
+
+.photo-grid__like-button:active {
+    background: #000000;
 }

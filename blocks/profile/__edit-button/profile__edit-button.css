@@ -6,6 +6,16 @@
     box-sizing: border-box;
     background: no-repeat center center url(../../../images/edit-button.svg);
     margin-left: 18px;
+    transition: .2s;
+    -webkit-transition: .2s;
+    -moz-transition: .2s;
+    -ms-transition: .2s;
+    -o-transition: .2s;
+}
+
+.profile__edit-button:hover {
+    opacity: .6;
+    cursor: pointer;
 }
 
 @media screen and (max-width: 479px) {
