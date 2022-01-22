@@ -1,0 +1,20 @@
+.popup {
+    min-width: 100%;
+    min-height: 100%;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    display: none;
+}
+
+.popup::before {
+    content: '';
+    background: #000;
+    position: fixed;
+    top: 0;
+    min-width: 100%;
+    min-height: 100%;
+    opacity: .5;
+    z-index: 2;
+}

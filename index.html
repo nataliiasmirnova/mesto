@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="./pages/index.css">
 </head>
 
+
 <body class="page">
     <div class="page__container">
         <header class="header">
@@ -17,7 +18,7 @@
             <section class="profile">
                 <div class="profile__content">
                     <div class="profile__avatar">
-                        <img class="profile__img" src="images/profile-img.png" alt="фото профиля">
+                        <img class="profile__img" src="images/profile-img2.png" alt="фото профиля">
                     </div>
                     <div class="profile__info">
                         <div class="profile__first-line">
@@ -81,6 +82,20 @@
             <p class="footer__copyright" lang="en">&copy; 2022 Mesto Russia</p>
         </footer>
     </div>
+
+    <div class="popup">
+        <form class="popup__container">
+            <button class="popup__close-button"></button>
+            <h2 class="popup__title">Редактировать профиль</h2>
+            <label class="popup__label" for="name"></label>
+            <input type="text" class="popup__form-field" id="field-name" name="name" placeholder=" " required>
+            <label class="popup__label" for="profession"></label>
+            <input type="text" class="popup__form-field" id="field-profession" name="profession" placeholder=" " required>
+            <button class="popup__save-button" method="submit">Сохранить</button>
+        </form>
+    </div>
+    <!-- <script src="/index.js"></script> -->
+
 </body>
 
 </html>
