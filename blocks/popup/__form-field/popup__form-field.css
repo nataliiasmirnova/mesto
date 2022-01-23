@@ -1,14 +1,22 @@
-.popup__form-field {
-    min-width: 100%;
-    border: none;
-    border-bottom: 1px solid #000000;
-    opacity: 0.2;
-    box-sizing: border-box;
-    padding: 0;
-    margin-bottom: 30px;
-    color: #000000;
-}
-
-.popup__form-field:last-of-type {
-    margin-bottom: 0;
-}
+    .popup__form-field {
+        font-size: 14px;
+        line-height: 17px;
+        font-weight: 400;
+        min-width: 100%;
+        border: none;
+        border-bottom: 1px solid rgba(0, 0, 0, .2);
+        opacity: 1;
+        box-sizing: border-box;
+        padding: 0;
+        padding-bottom: 13px;
+        margin-bottom: 30px;
+        color: #000000;
+    }
+    
+    .popup__form-field:last-of-type {
+        margin-bottom: 0;
+    }
+    
+    .popup__form-field:focus {
+        outline: none;
+    }

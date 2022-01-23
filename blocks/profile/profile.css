@@ -9,7 +9,17 @@
     position: relative;
 }
 
-@media screen and (max-width: 479px) {
+
+/*@media screen and (max-width: 479px) {
+    .profile {
+        max-width: 282px;
+        flex-direction: column;
+        align-items: stretch;
+        padding: 42px 0 36px;
+    }
+}*/
+
+@media screen and (max-width: 600px) {
     .profile {
         max-width: 282px;
         flex-direction: column;

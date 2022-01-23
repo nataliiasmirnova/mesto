@@ -3,6 +3,12 @@
     margin: 0 auto;
 }
 
+@media screen and (min-width: 479px) and (max-width: 620px) {
+    .photo-grid {
+        max-width: 447px;
+    }
+}
+
 @media screen and (max-width: 479px) {
     .photo-grid {
         max-width: 282px;

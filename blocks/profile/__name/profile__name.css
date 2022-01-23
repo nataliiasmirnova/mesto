@@ -3,12 +3,17 @@
     line-height: 48px;
     font-weight: 500;
     margin: 0;
-    /*max-width: 100%;
-    text-align: left;
-    flex-wrap: wrap;*/
 }
 
-@media screen and (max-width: 479px) {
+
+/*@media screen and (max-width: 479px) {
+    .profile__name {
+        font-size: 27px;
+        line-height: 33px;
+    }
+}*/
+
+@media screen and (max-width: 600px) {
     .profile__name {
         font-size: 27px;
         line-height: 33px;

@@ -4,7 +4,14 @@
     align-items: center;
 }
 
-@media screen and (max-width: 479px) {
+
+/*@media screen and (max-width: 479px) {
+    .profile__content {
+        flex-direction: column;
+    }
+}*/
+
+@media screen and (max-width: 600px) {
     .profile__content {
         flex-direction: column;
     }
