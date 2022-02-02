@@ -17,19 +17,18 @@
         <main>
             <section class="profile">
                 <div class="profile__content">
-                    <div class="profile__avatar">
-                        <img class="profile__img" src="images/profile-img2.png" alt="фото профиля">
-                    </div>
+                    <img class="profile__img" src="images/profile-img2.png" alt="фото профиля">
                     <div class="profile__info">
-                        <div class="profile__first-line">
+
+                        <div class="profile__inner">
                             <h1 class="profile__name">Жак-Ив Кусто</h1>
-                            <button class="profile__edit-button"></button>
+                            <button class="profile__edit-button" type="button"></button>
                         </div>
                         <p class="profile__profession">Исследователь океана</p>
                     </div>
                 </div>
-                <div class="profile__add-button">
-                </div>
+                <button class="profile__add-button" type="button">
+                </button>
             </section>
             <section class="photo-grid">
                 <ul class="photo-grid__list">
@@ -37,42 +36,42 @@
                         <img class="photo-grid__image" src="images/photo-grid-gauja.jpg" alt="Гауя сверху">
                         <div class="photo-grid__card-info">
                             <h2 class="photo-grid__card-title">Гауя</h2>
-                            <button class="photo-grid__like-button"></button>
+                            <button class="photo-grid__like-button" type="button"></button>
                         </div>
                     </li>
                     <li class="photo-grid__card">
                         <img class="photo-grid__image" src="images/photo-grid-baltic-sea.jpg" alt="Берег Балтийского моря">
                         <div class="photo-grid__card-info">
                             <h2 class="photo-grid__card-title">Балтика</h2>
-                            <button class="photo-grid__like-button"></button>
+                            <button class="photo-grid__like-button" type="button"></button>
                         </div>
                     </li>
                     <li class="photo-grid__card">
                         <img class="photo-grid__image" src="images/photo-grid-kuldiga.jpg" alt="Водопад на реке Вента">
                         <div class="photo-grid__card-info">
                             <h2 class="photo-grid__card-title">Кулдига</h2>
-                            <button class="photo-grid__like-button"></button>
+                            <button class="photo-grid__like-button" type="button"></button>
                         </div>
                     </li>
                     <li class="photo-grid__card">
                         <img class="photo-grid__image" src="images/photo-grid-tervete.jpg" alt="Идол в Тервете">
                         <div class="photo-grid__card-info">
                             <h2 class="photo-grid__card-title">Терветский национальный парк</h2>
-                            <button class="photo-grid__like-button"></button>
+                            <button class="photo-grid__like-button" type="button"></button>
                         </div>
                     </li>
                     <li class="photo-grid__card">
                         <img class="photo-grid__image" src="images/photo-grid-riga.jpg" alt="Старая Рига">
                         <div class="photo-grid__card-info">
                             <h2 class="photo-grid__card-title">Старая Рига</h2>
-                            <button class="photo-grid__like-button"></button>
+                            <button class="photo-grid__like-button" type="button"></button>
                         </div>
                     </li>
                     <li class="photo-grid__card">
                         <img class="photo-grid__image" src="images/photo-grid-ogre.jpg" alt="Озеро в Огре">
                         <div class="photo-grid__card-info">
                             <h2 class="photo-grid__card-title">Огре</h2>
-                            <button class="photo-grid__like-button"></button>
+                            <button class="photo-grid__like-button" type="button"></button>
                         </div>
                     </li>
                 </ul>
@@ -84,17 +83,20 @@
     </div>
 
     <div class="popup">
-        <form class="popup__container" method="post">
-            <button class="popup__close-button"></button>
-            <h2 class="popup__title">Редактировать профиль</h2>
-            <label class="popup__label" for="field-name"></label>
-            <input class="popup__form-field" type="text" value="Ваше имя" id="field-name" name="name" placeholder=" " required>
-            <label class="popup__label" for="field-profession"></label>
-            <input class="popup__form-field" type="text" value="Ваша профессия" id="field-profession" name="profession" placeholder=" " required>
-            <button class="popup__save-button" type="submit">Сохранить</button>
-        </form>
+        <div class="popap__wrapper">
+            <button class="popup__close-button" type="button"></button>
+            <form class="popup__container" method="post" name="edit-ptofile">
+                <h2 class="popup__title">Редактировать профиль</h2>
+                <label class="popup__label" for="field-name"></label>
+                <input class="popup__form-field" type="text" value="Ваше имя" id="field-name" name="name" placeholder="Ваше имя" required>
+                <label class="popup__label" for="field-profession"></label>
+                <input class="popup__form-field" type="text" value="Ваша профессия" id="field-profession" name="profession" placeholder="Ваша профессия" required>
+                <button class="popup__save-button" type="submit">Сохранить</button>
+            </form>
+        </div>
     </div>
-    <script src="index.js"></script>
+
+    <script src="scripts/index.js"></script>
 
 </body>
 

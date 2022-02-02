@@ -1,4 +1,6 @@
 .photo-grid__card {
+    display: grid;
+    grid-template-areas: "image" "title";
     width: 100%;
     height: 100%;
     overflow: hidden;

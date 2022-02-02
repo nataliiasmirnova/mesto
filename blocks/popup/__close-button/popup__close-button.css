@@ -6,6 +6,7 @@
     position: absolute;
     top: -40px;
     left: 438px;
+    cursor: pointer;
     background: no-repeat center center url(../../../images/close-button-32.svg);
     transition: .2s;
     -webkit-transition: .2s;

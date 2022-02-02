@@ -2,9 +2,10 @@
     min-width: 150px;
     height: 50px;
     display: flex;
-    border: 1px solid #ffffff;
+    border: 2px solid #ffffff;
     box-sizing: border-box;
-    background: no-repeat center center url(../../../images/add-button.svg);
+    border-radius: 2px;
+    background: no-repeat center center url(../../../images/add-button-22.svg);
     transition: .2s;
     -webkit-transition: .2s;
     -moz-transition: .2s;
@@ -15,4 +16,10 @@
 .profile__add-button:hover {
     opacity: .6;
     cursor: pointer;
+}
+
+@media screen and (max-width: 479px) {
+    .profile__add-button {
+        background: no-repeat center center url(../../../images/add-button-17.svg);
+    }
 }
