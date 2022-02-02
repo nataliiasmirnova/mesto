@@ -7,7 +7,13 @@
     padding: 66px 0 60px 0px;
 }
 
-@media screen and (max-width: 479px) {
+@media screen and (min-width: 510px) and (max-width: 914px) {
+    .footer__copyright {
+        padding: 66px 0 60px 17px;
+    }
+}
+
+@media screen and (max-width: 510px) {
     .footer__copyright {
         padding: 48px 0 36px 0px;
         font-size: 14px;

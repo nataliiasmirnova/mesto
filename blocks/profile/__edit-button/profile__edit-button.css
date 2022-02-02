@@ -18,25 +18,13 @@
     cursor: pointer;
 }
 
-
-/*@media screen and (max-width: 479px) {
+@media screen and (max-width: 914px) {
     .profile__edit-button {
         min-width: 18px;
         height: 18px;
         margin-left: 0;
         position: absolute;
-        top: 196px;
-        left: 248px;
-    }
-}*/
-
-@media screen and (max-width: 479px) {
-    .profile__edit-button {
-        min-width: 18px;
-        height: 18px;
-        margin-left: 0;
-        position: absolute;
-        top: 196px;
-        left: 248px;
+        top: 8px;
+        left: 199px;
     }
 }

@@ -1,5 +1,4 @@
 .photo-grid__card-info {
-    grid-area: title;
     display: flex;
     justify-content: space-between;
     align-items: center;

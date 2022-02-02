@@ -1,6 +1,5 @@
 .profile__inner {
     display: flex;
     align-items: center;
-    max-height: 26px;
     position: relative;
 }

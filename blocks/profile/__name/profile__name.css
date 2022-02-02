@@ -9,15 +9,7 @@
     white-space: nowrap;
 }
 
-
-/*@media screen and (max-width: 479px) {
-    .profile__name {
-        font-size: 27px;
-        line-height: 33px;
-    }
-}*/
-
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 914px) {
     .profile__name {
         font-size: 27px;
         line-height: 33px;

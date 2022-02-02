@@ -5,7 +5,7 @@
     padding: 0;
     position: absolute;
     top: -40px;
-    left: 438px;
+    right: -40px;
     cursor: pointer;
     background: no-repeat center center url(../../../images/close-button-32.svg);
     transition: .2s;
@@ -19,12 +19,12 @@
     opacity: .6;
 }
 
-@media screen and (max-width: 479px) {
+@media screen and (max-width: 620px) {
     .popup__close-button {
         min-width: 20px;
         height: 20px;
         top: -36px;
-        left: 262px;
+        right: 0;
         background: no-repeat center center url(../../../images/close-button-20.svg);
     }
 }

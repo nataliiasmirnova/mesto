@@ -3,20 +3,21 @@
     padding: 0;
     display: grid;
     grid-template-columns: repeat(3, 282px);
-    /*grid-auto-rows: 361px;*/
     row-gap: 20px;
     column-gap: 17px;
     font-size: 0;
 }
 
-@media screen and (min-width: 479px) and (max-width: 620px) {
+@media screen and (min-width: 510px) and (max-width: 914px) {
     .photo-grid__list {
         grid-template-columns: repeat(2, 1fr);
+        padding: 0 17px 0 17px;
     }
 }
 
-@media screen and (max-width: 479px) {
+@media screen and (max-width: 510px) {
     .photo-grid__list {
         grid-template-columns: 1fr;
+        padding: 0;
     }
 }
