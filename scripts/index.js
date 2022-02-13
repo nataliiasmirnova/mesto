@@ -1,4 +1,4 @@
-//открытие и закрытие попапа//
+//переменные//
 const profileEditButton = document.querySelector('.profile__edit-button')
 const popup = document.querySelector('.popup')
 const popupCloseButton = document.querySelector('.popup__close-button')
@@ -10,13 +10,23 @@ const professionInput = document.getElementById('field-profession');
 const nameOutput = document.querySelector('.profile__name');
 const professionOutput = document.querySelector('.profile__profession');
 
-//открытие попап//
+//шаблон карточки
+const template = document.querySelector('.card_template').content;
+//список карочек как переменная
+const list = document.querySelector('.photo-grid__list');
+
+
+//const input = document.querySelector('.form__input');
+//const button = document.querySelector('.form__submit');
+
+
+//открытие попапа//
 function openPopup(event) {
     /*event.preventDefault()*/
     popup.classList.add('popup_opened')
 }
 
-//закрытие попап через кнопку закрытия//
+//закрытие попапа через кнопку закрытия//
 function closePopup() {
     popup.classList.remove('popup_opened')
 }
@@ -47,3 +57,34 @@ profileEditButton.addEventListener('click', openEditPopup);
 popupCloseButton.addEventListener('click', closePopup);
 popupContainer.addEventListener('submit', formSubmitHandler);
 /*popup.addEventListener('click', backgroundClick);*/
+
+
+//рендеринг массива карточек
+function render() {
+    gridCards.forEach(renderCard);
+}
+
+//рендеринг массива карточек, стрелочная запись?
+//gridCards.forEach(element => renderCard);
+
+//создание одной карточки
+function renderCard(Card) {
+    const newCard = template.cloneNode(true);
+    newCard.querySelector('.photo-grid__card-title').innerText = Card.name;
+    newCard.querySelector('.photo-grid__image').src = Card.link;
+    newCard.querySelector('.photo-grid__image').alt = Card.alt;
+
+    //addListeners(newCard)
+    list.appendChild(newCard);
+}
+
+render();
+
+
+
+
+
+
+
+//вывод в консоль элементов присоединенного массива//
+//gridCards.forEach(element => console.log(element));

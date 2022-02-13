@@ -31,7 +31,7 @@
             </section>
             <section class="photo-grid">
                 <ul class="photo-grid__list">
-                    <li class="photo-grid__card">
+                    <!--<li class="photo-grid__card">
                         <img class="photo-grid__image" src="images/photo-grid-gauja.jpg" alt="Гауя сверху">
                         <div class="photo-grid__card-info">
                             <h2 class="photo-grid__card-title">Гауя</h2>
@@ -72,7 +72,7 @@
                             <h2 class="photo-grid__card-title">Огре</h2>
                             <button class="photo-grid__like-button" aria-label="Поставить лайк" type="button"></button>
                         </div>
-                    </li>
+                    </li>-->
                 </ul>
             </section>
         </main>
@@ -81,7 +81,7 @@
         </footer>
     </div>
 
-    <div class="popup">
+    <section class="popup">
         <div class="popup__wrapper">
             <button class="popup__close-button" aria-label="Закрыть попап" type="button"></button>
             <form class="popup__container" method="post" name="edit-ptofile">
@@ -93,8 +93,19 @@
                 <button class="popup__save-button" type="submit">Сохранить</button>
             </form>
         </div>
-    </div>
+    </section>
 
+    <template class="card_template">
+      <li class="photo-grid__card">
+        <img class="photo-grid__image" src="images/photo-grid-gauja.jpg" alt="Гауя сверху">
+        <div class="photo-grid__card-info">
+            <h2 class="photo-grid__card-title">Гауя</h2>
+            <button class="photo-grid__like-button" aria-label="Поставить лайк" type="button"></button>
+        </div>
+    </li>
+		</template>
+
+    <script src="scripts/gridCards.js"></script>
     <script src="scripts/index.js"></script>
 
 </body>
