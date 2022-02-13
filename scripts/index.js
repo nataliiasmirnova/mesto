@@ -15,6 +15,13 @@ const template = document.querySelector('.card_template').content;
 //список карочек как переменная
 const list = document.querySelector('.photo-grid__list');
 
+//попап добавления карточки
+const popupAddPlace = document.querySelector('.popup_add-place');
+//кнопка добавления карточки
+const cardAddButton = document.querySelector('.profile__add-button');
+//кнопка закрытия поапа добавления карточки
+const popupAddCardCloseButton = document.querySelector('.popup__close-button_place');
+
 
 //const input = document.querySelector('.form__input');
 //const button = document.querySelector('.form__submit');
@@ -53,10 +60,31 @@ function formSubmitHandler(evt) {
     closePopup()
 }
 
+
+//открытие попапа добавления карточки
+function openAddCardPopup() {
+    popupAddPlace.classList.add('popup_opened')
+}
+
+//закрытие попапа добавления карточки
+function closeAddCardPopup() {
+    popupAddPlace.classList.remove('popup_opened')
+}
+
+
 profileEditButton.addEventListener('click', openEditPopup);
 popupCloseButton.addEventListener('click', closePopup);
 popupContainer.addEventListener('submit', formSubmitHandler);
 /*popup.addEventListener('click', backgroundClick);*/
+
+cardAddButton.addEventListener('click', openAddCardPopup);
+popupAddCardCloseButton.addEventListener('click', closeAddCardPopup);
+
+
+
+
+
+
 
 
 //рендеринг массива карточек

@@ -95,6 +95,20 @@
         </div>
     </section>
 
+    <section class="popup popup_add-place">
+        <div class="popup__wrapper">
+            <button class="popup__close-button popup__close-button_place" aria-label="Закрыть попап" type="button"></button>
+            <form class="popup__container" method="post" name="add-place">
+                <h2 class="popup__title">Новое место</h2>
+                <label class="popup__label" for="field-place"></label>
+                <input class="popup__form-field" type="text" value="" id="field-place" name="place" placeholder="Название" required>
+                <label class="popup__label" for="field-link"></label>
+                <input class="popup__form-field" type="text" value="" id="field-link" name="link" placeholder="Ссылка на картинку" required>
+                <button class="popup__save-button" type="submit">Создать</button>
+            </form>
+        </div>
+    </section>
+
     <template class="card_template">
       <li class="photo-grid__card">
         <img class="photo-grid__image" src="images/photo-grid-gauja.jpg" alt="Гауя сверху">
