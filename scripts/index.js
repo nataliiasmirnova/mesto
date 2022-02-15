@@ -118,17 +118,25 @@ function render() {
 //gridCards.forEach(element => renderCard);
 
 //создание одной карточки
-function renderCard(Card) {
+function renderCard(card) {
     const newCard = template.cloneNode(true);
-    newCard.querySelector('.photo-grid__card-title').innerText = Card.name;
-    newCard.querySelector('.photo-grid__image').src = Card.link;
-    newCard.querySelector('.photo-grid__image').alt = Card.name;
+    newCard.querySelector('.photo-grid__card-title').innerText = card.name;
+    newCard.querySelector('.photo-grid__image').src = card.link;
+    newCard.querySelector('.photo-grid__image').alt = card.name;
 
     //addListeners(newCard)
     const likeCard = newCard.querySelector('.photo-grid__like-button');
     likeCard.addEventListener('click', () => {
         likeCard.classList.toggle('photo-grid__like-button_active');
     });
+
+    const trashButton = newCard.querySelector('.photo-grid__trash-button');
+    trashButton.addEventListener('click', deleteCard);
+
+    function deleteCard(click) {
+        click.target.closest('.photo-grid__card').remove();
+    }
+
     list.appendChild(newCard);
 }
 

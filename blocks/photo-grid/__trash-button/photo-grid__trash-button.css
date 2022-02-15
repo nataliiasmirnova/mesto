@@ -1,9 +1,12 @@
-.photo-grid__like-button {
-    min-width: 22px;
+.photo-grid__trash-button {
+    min-width: 18px;
     height: 19px;
     border: none;
     padding: 0;
-    background: no-repeat center center url(../../../images/like-button.svg);
+    background: no-repeat center center url(../../../images/trash-button.svg);
+    position: absolute;
+    top: 20px;
+    left: 244px;
     transition: .2s;
     -webkit-transition: .2s;
     -moz-transition: .2s;
@@ -11,7 +14,7 @@
     -o-transition: .2s;
 }
 
-.photo-grid__like-button:hover {
+.photo-grid__trash-button:hover {
     opacity: .6;
     cursor: pointer;
 }
