@@ -22,6 +22,13 @@ const cardAddButton = document.querySelector('.profile__add-button');
 //кнопка закрытия поапа добавления карточки
 const popupAddCardCloseButton = document.querySelector('.popup__close-button_place');
 
+//кнопка добавления карточки
+const popupAddCardCreateButton = document.querySelector('.popup__save-button_place');
+
+
+
+
+
 
 //const input = document.querySelector('.form__input');
 //const button = document.querySelector('.form__submit');
@@ -71,6 +78,23 @@ function closeAddCardPopup() {
     popupAddPlace.classList.remove('popup_opened')
 }
 
+function addCard() {
+    /*const newCard = template.cloneNode(true);
+    const placeName = document.getElementById('field-place');
+    const placeLink = document.getElementById('field-link');
+    newCard.querySelector('.photo-grid__card-title').innerText = placeName.value;
+    newCard.querySelector('.photo-grid__image').src = placeLink.value;
+    newCard.querySelector('.photo-grid__image').alt = placeName.value;
+    list.appendChild(newCard);*/
+    const placeName = document.getElementById('field-place');
+    const placeLink = document.getElementById('field-link');
+    const newCard = {
+        name: placeName.value,
+        link: placeLink.value
+    }
+    console.log(newCard);
+    renderCard(newCard);
+}
 
 profileEditButton.addEventListener('click', openEditPopup);
 popupCloseButton.addEventListener('click', closePopup);
@@ -79,9 +103,7 @@ popupContainer.addEventListener('submit', formSubmitHandler);
 
 cardAddButton.addEventListener('click', openAddCardPopup);
 popupAddCardCloseButton.addEventListener('click', closeAddCardPopup);
-
-
-
+popupAddCardCreateButton.addEventListener('click', addCard);
 
 
 
@@ -100,16 +122,17 @@ function renderCard(Card) {
     const newCard = template.cloneNode(true);
     newCard.querySelector('.photo-grid__card-title').innerText = Card.name;
     newCard.querySelector('.photo-grid__image').src = Card.link;
-    newCard.querySelector('.photo-grid__image').alt = Card.alt;
+    newCard.querySelector('.photo-grid__image').alt = Card.name;
 
     //addListeners(newCard)
+    const likeCard = newCard.querySelector('.photo-grid__like-button');
+    likeCard.addEventListener('click', () => {
+        likeCard.classList.toggle('photo-grid__like-button_active');
+    });
     list.appendChild(newCard);
 }
 
 render();
-
-
-
 
 
 
