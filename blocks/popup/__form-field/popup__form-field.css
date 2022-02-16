@@ -9,14 +9,16 @@
         box-sizing: border-box;
         padding: 0;
         padding-bottom: 13px;
+        padding-top: 10px;
         margin-bottom: 30px;
         color: #000000;
     }
-    
+
     .popup__form-field:last-of-type {
         margin-bottom: 0;
     }
-    
-    .popup__form-field:focus {
+    /*.popup__form-field:focus {
         outline: none;
     }
+
+*/

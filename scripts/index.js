@@ -78,21 +78,16 @@ function closeAddCardPopup() {
     popupAddPlace.classList.remove('popup_opened')
 }
 
-function addCard() {
-    /*const newCard = template.cloneNode(true);
-    const placeName = document.getElementById('field-place');
-    const placeLink = document.getElementById('field-link');
-    newCard.querySelector('.photo-grid__card-title').innerText = placeName.value;
-    newCard.querySelector('.photo-grid__image').src = placeLink.value;
-    newCard.querySelector('.photo-grid__image').alt = placeName.value;
-    list.appendChild(newCard);*/
+//добавление новой карточки
+function addCard(event) {
+    event.preventDefault();
+    closeAddCardPopup();
     const placeName = document.getElementById('field-place');
     const placeLink = document.getElementById('field-link');
     const newCard = {
         name: placeName.value,
         link: placeLink.value
     }
-    console.log(newCard);
     renderCard(newCard);
 }
 
@@ -108,16 +103,12 @@ popupAddCardCreateButton.addEventListener('click', addCard);
 
 
 
-
 //рендеринг массива карточек
 function render() {
-    gridCards.forEach(renderCard);
+    gridCards.reverse().forEach(renderCard);
 }
 
-//рендеринг массива карточек, стрелочная запись?
-//gridCards.forEach(element => renderCard);
-
-//создание одной карточки
+//рендеринг одной карточки
 function renderCard(card) {
     const newCard = template.cloneNode(true);
     newCard.querySelector('.photo-grid__card-title').innerText = card.name;
@@ -137,10 +128,11 @@ function renderCard(card) {
         click.target.closest('.photo-grid__card').remove();
     }
 
-    list.appendChild(newCard);
+    list.prepend(newCard);
 }
 
 render();
+
 
 
 
