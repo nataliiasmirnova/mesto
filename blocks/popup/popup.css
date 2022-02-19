@@ -3,8 +3,15 @@
     min-height: 100%;
     align-items: center;
     position: fixed;
+    display: flex;
     top: 0;
     left: 0;
-    display: none;
     background: rgba(0, 0, 0, .5);
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity .8s, visibility .8s linear;
+    -webkit-transition: opacity .8s, visibility .8s linear;
+    -moz-transition: opacity .8s, visibility .8s linear;
+    -ms-transition: opacity .8s, visibility .8s linear;
+    -o-transition: opacity .8s, visibility .8s linear;
 }
