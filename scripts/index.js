@@ -25,6 +25,11 @@ const popupAddCardCloseButton = document.querySelector('.popup__close-button_pla
 //кнопка добавления карточки
 const popupAddCardCreateButton = document.querySelector('.popup__save-button_place');
 
+//попап зум
+const popupImage = document.querySelector('.popup_image');
+
+//кнопка закрытия зума карточки
+const popupImageCloseButton = document.querySelector('.popup__close-button_image');
 
 
 
@@ -91,6 +96,13 @@ function addCard(event) {
     renderCard(newCard);
 }
 
+
+
+
+
+
+
+
 profileEditButton.addEventListener('click', openEditPopup);
 popupCloseButton.addEventListener('click', closePopup);
 popupContainer.addEventListener('submit', formSubmitHandler);
@@ -99,6 +111,12 @@ popupContainer.addEventListener('submit', formSubmitHandler);
 cardAddButton.addEventListener('click', openAddCardPopup);
 popupAddCardCloseButton.addEventListener('click', closeAddCardPopup);
 popupAddCardCreateButton.addEventListener('click', addCard);
+
+
+
+
+
+
 
 
 
@@ -128,14 +146,34 @@ function renderCard(card) {
         click.target.closest('.photo-grid__card').remove();
     }
 
+    const photoGridImage = newCard.querySelector('.photo-grid__image');
+    photoGridImage.addEventListener('click', openCard);
+    popupImageCloseButton.addEventListener('click', closeCard);
+
+
+
+
+    //зум карточки
+    function openCard(click) {
+        popupImage.classList.add('popup_opened');
+
+        const cardBig = document.querySelector('.popup__image');
+        const cardBigTitle = document.querySelector('.popup__image-title');
+        cardBig.alt = click.target.alt;
+        cardBig.src = click.target.src;
+        cardBigTitle.innerText = click.target.alt;
+    };
+
+    function closeCard() {
+        popupImage.classList.remove('popup_opened')
+    };
+
+
+
+
+
+
     list.prepend(newCard);
 }
 
 render();
-
-
-
-
-
-//вывод в консоль элементов присоединенного массива//
-//gridCards.forEach(element => console.log(element));

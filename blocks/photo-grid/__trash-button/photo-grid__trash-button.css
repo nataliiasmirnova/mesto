@@ -3,10 +3,11 @@
     height: 19px;
     border: none;
     padding: 0;
+    margin: 0;
     background: no-repeat center center url(../../../images/trash-button.svg);
     position: absolute;
     top: 20px;
-    left: 244px;
+    right: 20px;
     transition: .2s;
     -webkit-transition: .2s;
     -moz-transition: .2s;
